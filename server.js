@@ -1,12 +1,13 @@
 // server.js — Express app: serves static front end + one API endpoint.
 const express = require('express');
 const _ = require('lodash');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // In-memory storage only — no database.
 const messages = [];
