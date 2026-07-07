@@ -11,7 +11,12 @@ const messagesEl = document.getElementById('messages');
 function renderMessage(msg) {
   const el = document.createElement('div');
   el.className = 'message';
-  el.innerHTML = '<strong>' + msg.name + '</strong>: ' + msg.text;
+
+  const nameEl = document.createElement('strong');
+  nameEl.textContent = msg.name;
+
+  el.appendChild(nameEl);
+  el.appendChild(document.createTextNode(': ' + msg.text));
   messagesEl.appendChild(el);
 }
 
