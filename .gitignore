@@ -1,3 +1,6 @@
 node_modules/
 npm-debug.log*
 .DS_Store
+
+# Personal presenter notes — not part of the public demo repo
+DEMO-NOTES.md
